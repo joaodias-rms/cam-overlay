@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Dimensions, View, Text } from 'react-native';
 import Svg, { Circle, Defs, Rect, Mask } from 'react-native-svg';
 import { styles } from './styles';
-import { design } from '../../global/color.config';
+import { design } from '../../global/theme/color.config';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 interface DocumentType {
@@ -18,7 +18,7 @@ const CamOverlay = (documentType: DocumentType) => {
         <View style={styles.container}>
                 <Svg height={height} viewBox={viewBox}>
                     <Defs>
-                        <Mask id="mask">
+                        <Mask>
                             <Rect height={height} width={width} fill="#ffffff" />
                             <Circle
                                 r={circleRadius}
